@@ -1,0 +1,479 @@
+{% extends 'base.html' %}
+{% block style %}
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+        color: #ffd700;
+    }
+
+    .container {
+        flex: 1;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin: 20px;
+        overflow: hidden;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .container ul {
+        text-align: left; /* Добавлен стиль для прижатия текста списка к левому краю */
+    }
+
+    html {
+        line-height: 1.5;
+        font-family: Georgia, serif;
+        font-size: 20px;
+        color: #1a1a1a;
+        background-color: #fdfdfd;
+    }
+
+    table {
+        margin: 1em 0;
+        border-collapse: collapse;
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+        font-variant-numeric: lining-nums tabular-nums;
+    }
+
+    table caption {
+        margin-bottom: 0.75em;
+    }
+
+    tbody {
+        margin-top: 0.5em;
+        border-top: 1px solid #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    th {
+        border-top: 1px solid #1a1a1a;
+        padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+
+    td {
+        padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+</style>
+{% endblock %}
+{% block title %}
+Hypothesis
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>My Hypothesis</h1>
+    <p>Regarding this hypothesis, I believe that the price of a car depends on several factors:</p>
+
+    <ul>
+        <li> Car Mileage is the most significant factor influencing car price. 
+        </li>
+        <li>  Year of Production is the 2 most important factor and car tier is just narrowly less valuable.
+        </li>
+        <li>Engine volume and drivetrain are moderately notable and have comparable levels of impact.</li>
+        <li>     Transmission, Fuel Type, Specialness show weak relationships with car price and of these three Specialness is the least impactful because
+             we can see that price nearly does not change with Specialness increasing and even drops almost by half when hitting its maximum point</li>
+    </ul>
+    <p>My idea involves restructuring our data set. I plan to introduce new columns that contain types of
+         fuel, transmission, drivetrain, Car Tier represented digitally. 
+         I have already splitted our cars into "tiers" for convenience</p>
+    <div>
+        <style scoped>
+            .dataframe tbody tr th:only-of-type {
+                vertical-align: middle;
+            }
+
+            .dataframe tbody tr th {
+                vertical-align: top;
+            }
+
+            .dataframe thead th {
+                text-align: right;
+            }
+        </style>
+        <table border="1" class="dataframe">
+            <thead>
+            <tr style="text-align: right;">
+                <th></th>
+                <th>Car Name</th>
+                <th>Car Price</th>
+                <th>Car Mileage</th>
+                <th>Exterior Color</th>
+                <th>Interior COlor</th>
+                <th>Drivetrain</th>
+                <th>Fuel Type</th>
+                <th>Transmission</th>
+                <th>Engine</th>
+                <th>Year of Production</th>
+                <th>Car Brand</th>
+                <th>Engine Volume</th>
+                <th>Price Range</th>
+                <th>Car Tier</th>
+                <th>Specialness</th>
+                <th>Drivetrain_rating</th>
+                <th>Transmission_rating</th>
+                <th>Car Tier_rating</th>
+                <th>Fuel Type_rating</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>0</th>
+                <td>Chevrolet Colorado LT</td>
+                <td>37450.0</td>
+                <td>0.0</td>
+                <td>Summit White</td>
+                <td>Jet Black</td>
+                <td>Rear-wheel Drive</td>
+                <td>Gasoline</td>
+                <td>Automatic</td>
+                <td>2.7L I-4 gasoline direct injection, DOHC, vari...</td>
+                <td>2023</td>
+                <td>Chevrolet</td>
+                <td>2.7</td>
+                <td>10k-50k</td>
+                <td>B-tier</td>
+                <td>0</td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>GMC Yukon XL SLT</td>
+                <td>80235.0</td>
+                <td>0.0</td>
+                <td>Onyx Black</td>
+                <td>Jet Black</td>
+                <td>Four-wheel Drive</td>
+                <td>Gasoline</td>
+                <td>Automatic</td>
+                <td>EcoTec3 5.3L V-8 gasoline direct injection, va...</td>
+                <td>2023</td>
+                <td>GMC</td>
+                <td>5.3</td>
+                <td>50k-100k</td>
+                <td>C-tier</td>
+                <td>0</td>
+                <td>9</td>
+                <td>6</td>
+                <td>4</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Chevrolet Silverado 2500 LT</td>
+                <td>68560.0</td>
+                <td>0.0</td>
+                <td>Summit White</td>
+                <td>Jet Black</td>
+                <td>Four-wheel Drive</td>
+                <td>Diesel</td>
+                <td>Automatic</td>
+                <td>Turbocharged Diesel V8 6.6L/403</td>
+                <td>2023 </td>
+                <td>Chevrolet</td>
+                <td>6.6</td>
+                <td>50k-100k</td>
+                <td>B-tier</td>
+                <td>1</td>
+                <td>9</td>
+                <td>6</td>
+                <td>6</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Chevrolet Silverado 2500 LT</td>
+                <td>68560.0</td>
+                <td>0.0</td>
+                <td>Black</td>
+                <td>Jet Black</td>
+                <td>Four-wheel Drive</td>
+                <td>Diesel</td>
+                <td>Automatic</td>
+                <td>Turbocharged Diesel V8 6.6L/403</td>
+                <td>2023</td>
+                <td>Chevrolet</td>
+                <td>6.6</td>
+                <td>50k-100k</td>
+                <td>B-tier</td>
+                <td>1</td>
+                <td>9</td>
+                <td>6</td>
+                <td>6</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>Chevrolet Trailblazer LT</td>
+                <td>26710.0</td>
+                <td>0.0</td>
+                <td>Mosaic Black Metallic</td>
+                <td>Jet Black</td>
+                <td>Front-wheel Drive</td>
+                <td>Gasoline</td>
+                <td>Automatic</td>
+                <td>1.3L I3 12V GDI DOHC Turbo</td>
+                <td>2023</td>
+                <td>Chevrolet</td>
+                <td>1.3</td>
+                <td>10k-50k</td>
+                <td>B-tier</td>
+                <td>0</td>
+                <td>5</td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>...</th>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <th>1737</th>
+                <td>Chevrolet Tahoe LTZ</td>
+                <td>14799.0</td>
+                <td>165199.0</td>
+                <td>White</td>
+                <td>Gray</td>
+                <td>Four-wheel Drive</td>
+                <td>E85 Flex Fuel</td>
+                <td>4-Speed Automatic</td>
+                <td>5.3L V8 16V MPFI OHV Flexible Fuel</td>
+                <td>2008</td>
+                <td>Chevrolet</td>
+                <td>5.3</td>
+                <td>10k-50k</td>
+                <td>B-tier</td>
+                <td>0</td>
+                <td>9</td>
+                <td>4</td>
+                <td>6</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>1738</th>
+                <td>Ford E250 Cargo</td>
+                <td>14900.0</td>
+                <td>176367.0</td>
+                <td>Oxford White</td>
+                <td>Gray</td>
+                <td>Rear-wheel Drive</td>
+                <td>E85 Flex Fuel</td>
+                <td>4-Speed Automatic</td>
+                <td>5.4L V8 16V MPFI SOHC Flexible Fuel</td>
+                <td>2011</td>
+                <td>Ford</td>
+                <td>5.4</td>
+                <td>10k-50k</td>
+                <td>C-tier</td>
+                <td>0</td>
+                <td>6</td>
+                <td>4</td>
+                <td>4</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>1739</th>
+                <td>GMC Sierra 1500 SLT</td>
+                <td>18495.0</td>
+                <td>184734.0</td>
+                <td>Summit White</td>
+                <td>Cocoa / Dune</td>
+                <td>Rear-wheel Drive</td>
+                <td>Gasoline</td>
+                <td>6-Speed Automatic</td>
+                <td>5.3L V8 16V GDI OHV</td>
+                <td>2015</td>
+                <td>GMC</td>
+                <td>5.3</td>
+                <td>10k-50k</td>
+                <td>C-tier</td>
+                <td>0</td>
+                <td>6</td>
+                <td>6</td>
+                <td>4</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>1740</th>
+                <td>Ford F-150 XLT SuperCrew</td>
+                <td>7995.0</td>
+                <td>193750.0</td>
+                <td>Gold</td>
+                <td>Tan</td>
+                <td>Rear-wheel Drive</td>
+                <td>Gasoline</td>
+                <td>4-Speed Automatic</td>
+                <td>4.6L V8 16V MPFI SOHC</td>
+                <td>2004</td>
+                <td>Ford</td>
+                <td>4.6</td>
+                <td>0-10k</td>
+                <td>C-tier</td>
+                <td>0</td>
+                <td>6</td>
+                <td>4</td>
+                <td>4</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>1741</th>
+                <td>Toyota Land Cruiser</td>
+                <td>16925.0</td>
+                <td>207610.0</td>
+                <td>Dark Red Mica</td>
+                <td>Ivory</td>
+                <td>Four-wheel Drive</td>
+                <td>Gasoline</td>
+                <td>5-Speed Automatic</td>
+                <td>4.7L V8 32V MPFI DOHC</td>
+                <td>2005</td>
+                <td>Toyota</td>
+                <td>4.7</td>
+                <td>10k-50k</td>
+                <td>C-tier</td>
+                <td>0</td>
+                <td>9</td>
+                <td>5</td>
+                <td>4</td>
+                <td>6</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><strong>Returning to my hypothesis, let's analyze key aspects of the plot:</strong></p>
+
+    <ul>
+        <li>1) Mileage is the most influential factor affecting car price. As mileage increases, the price decreases significantly, showing its critical importance.
+        </li>
+        <li>2) The year of production is the second most important factor. Newer cars (with a higher year of production) are generally more expensive, highlighting the strong influence of this parameter.
+        </li>
+        <li>3) Car Tier ranks third in importance, slightly behind the year of production. Its effect on price is reflected through distinct clusters corresponding to different tiers.
+        </li>
+        <li>4) Engine volume and drivetrain have a reasonable and similar influence on car price. Their impact is noticeable but less significant than mileage, year of production, and car tier.
+        </li>
+        <li> 5) Transmission type, fuel type, and specialness show weak relationships with car price. Among these, Specialness is the least impactful: price remains almost unchanged as specialness increases
+        </li>
+    </ul>
+
+    * Price vs. Car Mileage (-0.32293):
+    There is a strong negative correlation between price and mileage. This indicates that the price of a car decreases with increase of mileage
+    * Price vs. Year of Production (0.23571):
+    There is a positive correlation between the year of production and car price. Newer cars tend to have higher prices, but the correlation is slightly weaker than that of mileage. 
+    * Price vs. Transmission_rating (0.09886):
+    THere is a very weak positive correlation, meaning it has minimal impact on car price. 
+    * Price vs. Engine Volume (0.27725):
+     There is a considerable positive correlation. 
+     * Price vs. Car Tier_rating (0.40480):
+     There is the most significant positive correlation between price and Car Tier. A lower-tier rating corresponds to a higher price drop, suggesting car tier is very important factor influencing price
+    * Price vs Specialness (0.15611):
+    There is a weak but still noticeable positive correlation of specialness and price. 
+    * Price vs Fuel Type_rating (0.14317):
+    There is weak positive correlation between Fuel Type and Price showing that it's influence is practically negligible
+    * Price vs Drivetrain_rating (0.25509):
+    THere is a strong positive correlation between price and drivetrain. It is an important factor
+
+    <p>Now let's pay attention to correlations to find the truth.</p>
+    <img src="../static/heatmap.png"/>
+    <p><strong>In my opinion, only correlations with 0.5 and bigger can be caused by some real connections, but other
+        correlations are just coincidences.</strong></p>
+
+    <ul>
+        <li><strong>Price vs. Car Mileage (-0.32293):</strong> There is a strong negative correlation between price and mileage. This indicates that the price of a car decreases with increase of mileage
+        </li>
+        <li><strong>Price vs. Year of Production (0.23571):</strong>  There is a positive correlation between the year of production and car price. Newer cars tend to have higher prices, but the correlation is slightly weaker than that of mileage. 
+        </li>
+        <li><strong>Price vs. Transmission_rating (0.09886):</strong> THere is a very weak positive correlation, meaning it has minimal impact on car price. 
+        </li>
+        <li><strong>Price vs. Engine Volume (0.27725):</strong>  There is a considerable positive correlation. 
+        </li>
+        <li><strong>Price vs. Car Tier_rating (0.40480):</strong> There is the most significant positive correlation between price and Car Tier. A lower-tier rating corresponds to a higher price drop, suggesting car tier is very important factor influencing price
+        </li>
+        <li><strong>Price vs Specialness (0.15611):</strong> There is a weak but still noticeable positive correlation of specialness and price. 
+        </li>
+        <li><strong>Price vs Fuel Type_rating (0.14317):</strong> There is weak positive correlation between Fuel Type and Price showing that it's influence is practically negligible
+        </li>
+        <li><strong>Price vs Drivetrain_rating (0.25509):</strong>  THere is a strong positive correlation between price and drivetrain. It is an important factor
+        </li>
+    </ul>
+
+    <p><strong>Contrary to my expectations, the analysis proves that Car Tier(brand) plays a more crucial role than mileage and year of production in influencing the price.
+         Furthermore, Engine Volume is more valuable than we expected slightly surpassing both Year of Production and Drivetrain. 
+        A new discovery for me is that I expected Specialness to be the least impactful among Fuel Type and Transmission but it turned out to be the most impactful. </strong></p>
+
+    <p>To summarize my hypothesis testing, it is important to mention that these correlations are not absolute (
+        not close to ±1). But we can still understand that my hypothesis about stronger dependencies between these
+        factors turns out to be mostly true but some of the hypothesized factors have a smaller percentage of the
+         overall correlation structure than we originally expected.</p>
+</div>
+{% endblock %}
