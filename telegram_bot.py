@@ -26,10 +26,6 @@ def predict_car_price(features):
     features_array = features.values if isinstance(features, pd.DataFrame) else np.array(features).reshape(1, -1)
     return model.predict(features_array)[0]
 
-
-# Функция для предсказания цены автомобиля (здесь замените на вашу реализацию)
-
-# Основной обработчик сообщений
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_data = context.user_data
     
@@ -40,7 +36,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     step = chat_data['step']
 
-    # Обработка каждого шага
     if step == 0:
         await update.message.reply_text("Enter Car Mileage:")
     elif step == 1:
@@ -92,7 +87,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         drivetrain_rating = {'AWD': 8, '4WD': 9, 'FWD': 5, 'RWD': 6}.get(drivetrain, 4)
         chat_data['stats'].append(drivetrain_rating)
 
-        # Предсказание цены
         stats = chat_data['stats']
         result = predict_car_price(stats)
         await update.message.reply_text(f"Result: {result}$. To try again write /restart")
@@ -101,7 +95,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     chat_data['step'] += 1
 
-# Команда /start
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Welcome to Car Price Predictor Bot! Let's start. Write anything to continue")
     context.user_data.clear()
@@ -112,7 +105,6 @@ async def restart_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data.clear()
     context.user_data['step'] = 0
     
-# Настройка бота
 def main():
     app = ApplicationBuilder().token("7691617195:AAGSXx7u7H8aeXMY5mjEe9ecj8dK_JIf3XA").build()
 
