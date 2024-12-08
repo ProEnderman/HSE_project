@@ -1,0 +1,1 @@
+4. Scatter plot that shows the connection betweeen the car price and car mileage. The information from this scatter plot will be later used in my hypothesis proof.

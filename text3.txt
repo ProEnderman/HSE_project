@@ -1,0 +1,1 @@
+Now Lets create a column where will be the engine volume in litres(0 if car is electric) and remove rows if there is no information about engine volume(for example just V6 or 8-cylinder). We can extract this number from the "Engine" column

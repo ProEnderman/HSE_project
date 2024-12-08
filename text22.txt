@@ -1,0 +1,21 @@
+* Price vs. Car Mileage (-0.32293):
+There is a strong negative correlation between price and mileage. This indicates that the price of a car decreases with increase of mileage
+* Price vs. Year of Production (0.23571):
+There is a positive correlation between the year of production and car price. Newer cars tend to have higher prices, but the correlation is slightly weaker than that of mileage. 
+* Price vs. Transmission_rating (0.09886):
+THere is a very weak positive correlation, meaning it has minimal impact on car price. 
+* Price vs. Engine Volume (0.27725):
+ There is a considerable positive correlation. 
+ * Price vs. Car Tier_rating (0.40480):
+ There is the most significant positive correlation between price and Car Tier. A lower-tier rating corresponds to a higher price drop, suggesting car tier is very important factor influencing price
+* Price vs Specialness (0.15611):
+There is a weak but still noticeable positive correlation of specialness and price. 
+* Price vs Fuel Type_rating (0.14317):
+There is weak positive correlation between Fuel Type and Price showing that it's influence is practically negligible
+* Price vs Drivetrain_rating (0.25509):
+There is a strong positive correlation between price and drivetrain. It is an important factor
+
+Contrary to my expectations, the analysis proves that Car Tier(brand) plays a more crucial role than mileage and year of production in influencing the price. Furthermore, Engine Volume is more valuable than we expected slightly surpassing both Year of Production and Drivetrain. A new discovery for me is that I expected Specialness to be the least impactful among Fuel Type and Transmission but it turned out to be the most impactful. 
+
+Now after creating a machine learning model that will allow us to calculate the predicted price of a car from such parameters as Car Mileage', 'Year of Production', 'Transmission_rating', 'Engine Volume', 'Car Tier_rating', 'Specialness', 'Fuel Type_rating', 'Drivetrain_rating' we can add this column to our dataset
+

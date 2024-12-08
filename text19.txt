@@ -1,0 +1,1 @@
+We can notice that we do not use columns VIN, TimeStamp, Source so we can delete them and check if we managed to do it correctly

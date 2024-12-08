@@ -1,0 +1,2 @@
+Now to see the full picture lets create plots of the dependence of price from car mileage by creating a bar chart that will show the average price of each brand of car depending on their mileage(<1000 miles, from 1000 to 10000 miles, from 10000 miles to 50000 miles, from 50000 miles to 100000 miles, more than 100000 miles) in each tier
+First of all, S-tier:

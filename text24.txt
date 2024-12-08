@@ -1,0 +1,1 @@
+The mean difference is approximately 7.3%, so we can say that the model is working!

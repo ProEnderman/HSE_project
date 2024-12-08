@@ -1,0 +1,2 @@
+Now lets add plots to all of our numerical fields. 
+1. The bar chart that shows the number of cars produced in each year

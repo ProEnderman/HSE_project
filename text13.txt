@@ -1,0 +1,3 @@
+Now we can go back to editing the dataset
+We can notice that in DriveTrain column there are some values like 4WD, AWD, FWD, RWD which stand for "Four-wheel drive", "All-wheel drive","Front-wheel drive","Rear-wheel drive" respectively. 
+We can replace these values so our dataset is easier to analyse

@@ -1,0 +1,39 @@
+Introduction:
+It is clear that cars are a significant part of many people’s lives, and it is not a rare situation that someone decides to buy or sell car but no one fully understands all the factors that influence the most important part - the price he should sell/buy car.
+For example, most people know some basic things like if car is almost new, there is a high chance that it will be more expensive, if the mileage is big, it will decrease the price of car and etc.
+But the relationships between all of these factos are not so clear. Someone might think that engine type and brand are the most crucial price determiners.
+However, this assumption might be false when we consider some underpowered or fragile but antique cars that are sold for millions of dollars.
+It is obvious that price of car is shaped by multiple factors and 1 main determinant does not exist. 
+In this project, I aim to create a model that will help people to determine the optimal price for any car. With help of such tools as Pandas, Matplotlib, Numpy and Seaborn, I will deeply analyze data
+Firsly, I would like to tell about each aspect I have information about in my dataset:
+    Brand:
+The brand refers to the mark of a car, such as Ferrari, Volvo, Lexus, etc. It represents the manufacturer or company that produces the vehicle.
+    Name:
+The name corresponds to the specific model of car brand, such as Tahoe Premier, Ghost, etc.
+    Drivetrain:
+Provides information about how a vehicle delivers power from its engine to the wheels - four-wheel drive, all-wheel drive etc
+    Exterior color:
+Provides information about the color of the vehicle’s exterior paint
+    Interior color:
+Provides information about the color of the vehicle’s interior paint
+    Fuel Type:
+Specifies the type of fuel the vehicle uses for its movement, such as gasoline, electric, hybrid, etc.
+    Year:
+Shows the year when vehicle was produced.
+    VIN:
+Provides the Vehicle Identification Number, a unique code assigned to every vehicle during manufacturing. 
+    Mileage:
+Shows to the total distance the vehicle has traveled, measured in miles.
+    Transmission:
+Shows the type of transmission system in the vehicle, for example, automatic or manual.
+    Price:
+Shows the cost of the vehicle.
+    Engine technologies:
+Gives the information about technologies used while making engine(GDI, OHV, MPFI etc).
+    Engine Characteristics:
+Shows the total volume and number of all the cylinders in the engine. It is  measured in liters and provides information about the engine's size.
+    Source:
+The link that directs to the website from which the information about car was taken
+    TimeStamp:
+Time when the information about the car was put into the dataset.
+Lets take a look at our dataset now

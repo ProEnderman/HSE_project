@@ -1,11 +1,18 @@
 import pandas as pd
 from typing import Tuple, List
 import re
+import os
 import pickle
 import pandas as pd
 import numpy as np
-df = pd.read_pickle('/Users/leonkul/projects/python/Session/API/df.pkl')
+# Построение пути к файлу относительно текущей директории
+# Построение пути относительно текущего файла
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # На уровень выше utils
+file_path = os.path.join(project_root, "df.pkl")  # Файл лежит в корне проекта
 
+
+# Загрузка файла
+df = pd.read_pickle(file_path)
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error

@@ -1,0 +1,7 @@
+By using different sources of information in the Internet we can split all car brands in 5 groups:
+S-tier: Ferrari, Lamborghini, McLaren, Bentley, Porsche, Aston
+A-tier: BMW, Mercedes-Benz, Audi, Rivian, Lotus, Maserati
+B-tier: Volvo, Chevrolet, Cadillac, Land Rover, Tesla, Jaguar, INFINITI, Nissan, RAM, Lincoln
+C-tier: Ford, Mazda, Genesis, Toyota, GMC, Jeep, Acura, Lexus, Dodge, Alfa
+D-tier: Buick, Chrysler, MINI, Mitsubishi, Scion, Subaru, Hyundai, Kia, Honda, Volkswagen
+Lets add this column into our dataset

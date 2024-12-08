@@ -1,0 +1,1 @@
+Now lets take a look at scatter plot that will show relationships betweeen different factors of cars in our dataset

@@ -1,0 +1,5 @@
+Regarding this hypothesis, I believe that the price of a car depends on several factors:
+
+Car Mileage is the most significant factor influencing car price. Year of Production is the 2 most important factor and car tier is just narrowly less valuable. Engine volume and drivetrain are moderately notable and have comparable levels of impact. Transmission, Fuel Type, Specialness show weak relationships with car price and of these three Specialness is the least impactful because we can see that price nearly does not change with Specialness increasing and even drops almost by half when hitting its maximum point
+
+My idea involves restructuring our data set. I plan to introduce new columns that contain types of fuel, transmission, drivetrain, Car Tier represented digitally. I have already splitted our cars into "tiers" for convenience

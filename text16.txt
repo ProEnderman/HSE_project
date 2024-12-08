@@ -1,0 +1,1 @@
+Now lets add the Transmission_rating column. We will change columns that look like "x-speed Automatic" to x where x is a number from 1 to 10. If the information is just "Automatic" we can take "middle" from 1 to 10 - 6. In every other situation lets just change to 4

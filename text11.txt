@@ -1,0 +1,4 @@
+We can notice that in some graphs there are sharp changes, for example, average price of Nissan dramatically dropped from approximately 96000$ to 23000$ from 2010 to 2011 and then abruptly increased back to 84000$. 
+There are more graphs with significant fluctuations so we can suppose that year of production and brand are not the only crucial factors that determine the price. 
+There are different types of Special addings in names of cars that increase their price, for example, Edition, Luxury, Limited etc. 
+Lets create a special Uniqueness column where we will check is there anything special in the car

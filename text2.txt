@@ -1,0 +1,6 @@
+In column Car Price lets delete '$' sign, change ',' to '.', transform it to numeric type and multiply by 1000 so we have a number of dollars and nothing else. Also lets delete all NaN rows where the price is not determined
+Now lets do the same thing to the "Car Mileage" column. Lets remove the 'mi.' and change ',' to '', transform it to numeric type so we have a number of miles and nothing else. Also lets delete all rows where car mileage is not determined
+Lets analogically delete some rows where 1 important detail is undetermined(Drivetrain, Fuel Type, Transmission, Engine) I have checked that there no rows with undetermined Car Name, VIN, TimeStamp or source but we will still check it with code
+When we finished with "cleaning" data up it is time to get descriptive statistics. We need descriptive statistics of at least 3 numerical fields but we have only 2 right now.
+We can do data transformation and add 3 new columns. First of all, lets extract the year of production of the car and Car Brand from the column "Car Name"
+Now lets take a look at our dataset now

@@ -1,0 +1,5 @@
+Lets add Drivetrain_rating column using this information from online-sources:
+	1.	AWD: 8/10.WD provides good balance between performance and practicality. It’s great for everyday use in all weather conditions, especially in rain, snow, and moderate off-road terrain but it has reduced fuel efficiency
+	2.	4WD: 9/10. 4WD systems are superior when it comes to serious off-roading and handling tough terrains. It’s the go-to option for off-road enthusiasts and trucks designed for heavy-duty use. It’s the best choice for rugged conditions but it might seem complicated to use for someone.
+	3.	RWD: 6/10. RWD is ideal for performance and handling on dry roads, providing a more dynamic driving experience. It’s used in sports cars, luxury sedans, and vehicles that require towing capacity. However, it struggles in wet or snowy conditions, making it less versatile compared to AWD or 4WD.
+	4.	FWD: 5/10. FWD is the most fuel-efficient and cost-effective drivetrain, commonly found in compact cars and sedans. While it’s great for urban commuting and dry road conditions, it lacks the traction and capability of AWD and 4WD systems in adverse weather or off-road situations.

@@ -1,0 +1,13 @@
+Returning to my hypothesis, let's analyse key aspects of the plot:
+
+1) Mileage is the most influential factor affecting car price. As mileage increases, the price decreases significantly, showing its critical importance.
+2) The year of production is the second most important factor. Newer cars (with a higher year of production) are generally more expensive, highlighting the strong influence of this parameter.
+3) Car Tier ranks third in importance, slightly behind the year of production. Its effect on price is reflected through distinct clusters corresponding to different tiers.
+4) Engine volume and drivetrain have a reasonable and similar influence on car price. Their impact is noticeable but less significant than mileage, year of production, and car tier.
+5) Transmission type, fuel type, and specialness show weak relationships with car price. Among these, Specialness is the least impactful: price remains almost unchanged as specialness increases
+
+
+Now let's pay attention to correlations to find the truth.
+
+
+To find out correlations we can use the heatmap graph. 

@@ -1,0 +1,1 @@
+Now lets create a column that will show the difference between predicted car price and actual car price in %

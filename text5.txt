@@ -1,0 +1,1 @@
+2. The pie chat that shows the number and percentage of price diapazone of sold cars(we will also add column price range to our dataset)
