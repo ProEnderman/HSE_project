@@ -67,7 +67,7 @@ async def add(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=5500)
+    uvicorn.run(app, host="193.124.47.223", port=5500)
 #git init
 #git add .
 #git commit -m "Initial commit"

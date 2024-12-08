@@ -27,7 +27,7 @@
     }
 
     nav a {
-        color: white;
+        color: #98FF98;
         text-decoration: none;
         margin: 0 20px;
         font-weight: bold;
@@ -35,7 +35,7 @@
     }
 
     nav a:hover {
-        color: #ffd700;
+        color: #2E8B57;
     }
 
     .container-wrapper {
@@ -74,8 +74,8 @@
     }
 
     .container button {
-        background-color: #4caf50;
-        color: white;
+        background-color: #2110d8;
+        color: #ffffff;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -84,12 +84,12 @@
     }
 
     .container button:hover {
-        background-color: #45a049;
+        background-color: #000000;
     }
 
     footer {
         background-color: #333;
-        color: white;
+        color: #ffffff;
         text-align: center;
         padding: 15px;
         width: 100%;
@@ -106,7 +106,6 @@
 {% block title %}
 Welcome
 {% endblock %}
-
 {% block body %}
 
 <div class="container-wrapper">
@@ -114,21 +113,12 @@ Welcome
         <img src="../static/telegram.png" alt="Image 1">
         <h2>MY TELEGRAM BOT</h2>
         <p>Here you can use my telegram bot to calculate approximate car price according to different parameters.</p>
-        <a href="@car_price_project_bot" target="_blank"
+        <a href="https://web.telegram.org/a/#7691617195" target="_blank"
            rel="noopener noreferrer">
             <button>View Telegram Bot!</button>
         </a>
     </div>
 
-    <div class="container">
-        <img src="../static/streamlite.png" alt="Image 2">
-        <h2>STREAMLITE PAGE OF PROJECT</h2>
-        <p>Here you can see most of my charts and comments on them.</p>
-        <a href="https://hseproject-q73juatd4x8xjfbjqbnq54.streamlit.app" target="_blank"
-           rel="noopener noreferrer">
-            <button>View Streamlite!</button>
-        </a>
-    </div>
 
     <div class="container">
         <img src="../static/gitbig.png" alt="Image 3">
@@ -137,6 +127,16 @@ Welcome
         <a href="https://github.com/ProEnderman/HSE_project/tree/main" target="_blank"
            rel="noopener noreferrer">
             <button>Look at GIT!</button>
+        </a>
+    </div>
+    
+    <div class="container">
+        <img src="../static/streamlite.png" alt="Image 2">
+        <h2>STREAMLITE PAGE OF PROJECT</h2>
+        <p>Here you can see most of my charts and comments on them.</p>
+        <a href="https://hseproject-q73juatd4x8xjfbjqbnq54.streamlit.app" target="_blank"
+           rel="noopener noreferrer">
+            <button>View Streamlite!</button>
         </a>
     </div>
 </div>
