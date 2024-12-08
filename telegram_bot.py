@@ -89,7 +89,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         stats = chat_data['stats']
         result = predict_car_price(stats)
-        await update.message.reply_text(f"Result: {result}$. To try again write /restart")
+        await update.message.reply_text(f"Result: {int(result)}$. To try again write /restart")
         chat_data.clear()
         return
 
