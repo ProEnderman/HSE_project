@@ -39,7 +39,6 @@ async def data(
 
 @app.get("/add", response_class=HTMLResponse)
 async def add(request: Request):
-    # Pass result as None or some default value
     return templates.TemplateResponse("add.html", {"request": request, "result": None, "lst": None})
 
 @app.post("/add", response_class=HTMLResponse)
@@ -68,8 +67,3 @@ async def add(
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="193.124.47.223", port=5500)
-#git init
-#git add .
-#git commit -m "Initial commit"
-#git remote add origin https://github.com/ProEnderman/HSE_project
-#git push -u origin main
